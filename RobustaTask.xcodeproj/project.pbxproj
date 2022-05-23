@@ -29,6 +29,7 @@
 		09F6DE47283B404500CABCBE /* ReposUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE46283B404500CABCBE /* ReposUseCase.swift */; };
 		09F6DE49283B405A00CABCBE /* RepoDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE48283B405A00CABCBE /* RepoDetailsUseCase.swift */; };
 		09F6DE4B283B409D00CABCBE /* GithubRepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE4A283B409D00CABCBE /* GithubRepositoriesService.swift */; };
+		09F6DE4D283C206B00CABCBE /* ImagesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE4C283C206B00CABCBE /* ImagesLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		09F6DE46283B404500CABCBE /* ReposUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposUseCase.swift; sourceTree = "<group>"; };
 		09F6DE48283B405A00CABCBE /* RepoDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsUseCase.swift; sourceTree = "<group>"; };
 		09F6DE4A283B409D00CABCBE /* GithubRepositoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoriesService.swift; sourceTree = "<group>"; };
+		09F6DE4C283C206B00CABCBE /* ImagesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				09F6DE37283B359600CABCBE /* Observable.swift */,
+				09F6DE4C283C206B00CABCBE /* ImagesLoader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F6DDFB283ADD1A00CABCBE /* ViewController.swift in Sources */,
+				09F6DE4D283C206B00CABCBE /* ImagesLoader.swift in Sources */,
 				09F6DE2B283B27E900CABCBE /* WindowManager.swift in Sources */,
 				09F6DE35283B34B800CABCBE /* ReposViewModel.swift in Sources */,
 				09F6DE47283B404500CABCBE /* ReposUseCase.swift in Sources */,
