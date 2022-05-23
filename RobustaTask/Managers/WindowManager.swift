@@ -12,7 +12,9 @@ enum WindowManager {
     static func configure() {
         window.makeKeyAndVisible()
         //TODO: set the root
-        window.rootViewController = UINavigationController()
+        window.rootViewController = UINavigationController(
+            rootViewController: ReposViewController.create()
+        )
     }
 }
 
