@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReposViewController" customModule="RobustaTask" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="XcQ-Uz-qdr" id="uwu-g6-3cx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +18,26 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XcQ-Uz-qdr">
+                    <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBlueColor"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="XcQ-Uz-qdr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jHU-Mq-8HX"/>
+                <constraint firstItem="XcQ-Uz-qdr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mC8-4I-S41"/>
+                <constraint firstItem="XcQ-Uz-qdr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sZm-nN-d1X"/>
+                <constraint firstItem="XcQ-Uz-qdr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="usq-cJ-A5F"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="88"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
