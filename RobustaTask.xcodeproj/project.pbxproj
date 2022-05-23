@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		09F6DDF7283ADD1A00CABCBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DDF6283ADD1A00CABCBE /* AppDelegate.swift */; };
-		09F6DDF9283ADD1A00CABCBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DDF8283ADD1A00CABCBE /* SceneDelegate.swift */; };
 		09F6DDFB283ADD1A00CABCBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DDFA283ADD1A00CABCBE /* ViewController.swift */; };
 		09F6DDFE283ADD1A00CABCBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F6DDFC283ADD1A00CABCBE /* Main.storyboard */; };
 		09F6DE01283ADD1A00CABCBE /* RobustaTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DDFF283ADD1A00CABCBE /* RobustaTask.xcdatamodeld */; };
@@ -17,6 +16,7 @@
 		09F6DE11283ADD1B00CABCBE /* RobustaTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE10283ADD1B00CABCBE /* RobustaTaskTests.swift */; };
 		09F6DE1B283ADD1B00CABCBE /* RobustaTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE1A283ADD1B00CABCBE /* RobustaTaskUITests.swift */; };
 		09F6DE1D283ADD1B00CABCBE /* RobustaTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE1C283ADD1B00CABCBE /* RobustaTaskUITestsLaunchTests.swift */; };
+		09F6DE2B283B27E900CABCBE /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE2A283B27E900CABCBE /* WindowManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		09F6DDF3283ADD1A00CABCBE /* RobustaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobustaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F6DDF6283ADD1A00CABCBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09F6DDF8283ADD1A00CABCBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		09F6DDFA283ADD1A00CABCBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		09F6DDFD283ADD1A00CABCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09F6DE00283ADD1A00CABCBE /* RobustaTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RobustaTask.xcdatamodel; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		09F6DE16283ADD1B00CABCBE /* RobustaTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobustaTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F6DE1A283ADD1B00CABCBE /* RobustaTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobustaTaskUITests.swift; sourceTree = "<group>"; };
 		09F6DE1C283ADD1B00CABCBE /* RobustaTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobustaTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		09F6DE2A283B27E900CABCBE /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 		09F6DDF5283ADD1A00CABCBE /* RobustaTask */ = {
 			isa = PBXGroup;
 			children = (
+				09F6DE29283B27CA00CABCBE /* Managers */,
 				09F6DDF6283ADD1A00CABCBE /* AppDelegate.swift */,
-				09F6DDF8283ADD1A00CABCBE /* SceneDelegate.swift */,
 				09F6DDFA283ADD1A00CABCBE /* ViewController.swift */,
 				09F6DDFC283ADD1A00CABCBE /* Main.storyboard */,
 				09F6DE02283ADD1B00CABCBE /* Assets.xcassets */,
@@ -128,6 +128,14 @@
 				09F6DE1C283ADD1B00CABCBE /* RobustaTaskUITestsLaunchTests.swift */,
 			);
 			path = RobustaTaskUITests;
+			sourceTree = "<group>";
+		};
+		09F6DE29283B27CA00CABCBE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DE2A283B27E900CABCBE /* WindowManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F6DDFB283ADD1A00CABCBE /* ViewController.swift in Sources */,
+				09F6DE2B283B27E900CABCBE /* WindowManager.swift in Sources */,
 				09F6DDF7283ADD1A00CABCBE /* AppDelegate.swift in Sources */,
-				09F6DDF9283ADD1A00CABCBE /* SceneDelegate.swift in Sources */,
 				09F6DE01283ADD1A00CABCBE /* RobustaTask.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
