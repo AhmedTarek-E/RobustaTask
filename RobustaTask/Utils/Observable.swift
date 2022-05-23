@@ -15,6 +15,7 @@ enum ObserverQueue {
 }
 
 class Observable<T> {
+    fileprivate init() {}
     
     var value: T?
     

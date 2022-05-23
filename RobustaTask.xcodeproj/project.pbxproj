@@ -21,6 +21,14 @@
 		09F6DE33283B334B00CABCBE /* ReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F6DE31283B334B00CABCBE /* ReposViewController.xib */; };
 		09F6DE35283B34B800CABCBE /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE34283B34B800CABCBE /* ReposViewModel.swift */; };
 		09F6DE38283B359600CABCBE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE37283B359600CABCBE /* Observable.swift */; };
+		09F6DE3A283B3F3E00CABCBE /* ReposState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE39283B3F3E00CABCBE /* ReposState.swift */; };
+		09F6DE3E283B3F7F00CABCBE /* RepoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE3C283B3F7F00CABCBE /* RepoDetailsViewController.swift */; };
+		09F6DE3F283B3F7F00CABCBE /* RepoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F6DE3D283B3F7F00CABCBE /* RepoDetailsViewController.xib */; };
+		09F6DE41283B3FA000CABCBE /* RepoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE40283B3FA000CABCBE /* RepoDetailsViewModel.swift */; };
+		09F6DE43283B3FBD00CABCBE /* RepoDetailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE42283B3FBD00CABCBE /* RepoDetailsState.swift */; };
+		09F6DE47283B404500CABCBE /* ReposUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE46283B404500CABCBE /* ReposUseCase.swift */; };
+		09F6DE49283B405A00CABCBE /* RepoDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE48283B405A00CABCBE /* RepoDetailsUseCase.swift */; };
+		09F6DE4B283B409D00CABCBE /* GithubRepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE4A283B409D00CABCBE /* GithubRepositoriesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +67,14 @@
 		09F6DE31283B334B00CABCBE /* ReposViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposViewController.xib; sourceTree = "<group>"; };
 		09F6DE34283B34B800CABCBE /* ReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModel.swift; sourceTree = "<group>"; };
 		09F6DE37283B359600CABCBE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		09F6DE39283B3F3E00CABCBE /* ReposState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposState.swift; sourceTree = "<group>"; };
+		09F6DE3C283B3F7F00CABCBE /* RepoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewController.swift; sourceTree = "<group>"; };
+		09F6DE3D283B3F7F00CABCBE /* RepoDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoDetailsViewController.xib; sourceTree = "<group>"; };
+		09F6DE40283B3FA000CABCBE /* RepoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewModel.swift; sourceTree = "<group>"; };
+		09F6DE42283B3FBD00CABCBE /* RepoDetailsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsState.swift; sourceTree = "<group>"; };
+		09F6DE46283B404500CABCBE /* ReposUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposUseCase.swift; sourceTree = "<group>"; };
+		09F6DE48283B405A00CABCBE /* RepoDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsUseCase.swift; sourceTree = "<group>"; };
+		09F6DE4A283B409D00CABCBE /* GithubRepositoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoriesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +176,8 @@
 		09F6DE2D283B32F600CABCBE /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				09F6DE45283B403300CABCBE /* Services */,
+				09F6DE44283B3FFE00CABCBE /* UseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -167,6 +185,7 @@
 		09F6DE2E283B32FD00CABCBE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				09F6DE3B283B3F5C00CABCBE /* RepoDetails */,
 				09F6DE2F283B330700CABCBE /* Repos */,
 			);
 			path = UI;
@@ -178,6 +197,7 @@
 				09F6DE30283B334B00CABCBE /* ReposViewController.swift */,
 				09F6DE31283B334B00CABCBE /* ReposViewController.xib */,
 				09F6DE34283B34B800CABCBE /* ReposViewModel.swift */,
+				09F6DE39283B3F3E00CABCBE /* ReposState.swift */,
 			);
 			path = Repos;
 			sourceTree = "<group>";
@@ -188,6 +208,34 @@
 				09F6DE37283B359600CABCBE /* Observable.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		09F6DE3B283B3F5C00CABCBE /* RepoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DE3C283B3F7F00CABCBE /* RepoDetailsViewController.swift */,
+				09F6DE3D283B3F7F00CABCBE /* RepoDetailsViewController.xib */,
+				09F6DE40283B3FA000CABCBE /* RepoDetailsViewModel.swift */,
+				09F6DE42283B3FBD00CABCBE /* RepoDetailsState.swift */,
+			);
+			path = RepoDetails;
+			sourceTree = "<group>";
+		};
+		09F6DE44283B3FFE00CABCBE /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DE46283B404500CABCBE /* ReposUseCase.swift */,
+				09F6DE48283B405A00CABCBE /* RepoDetailsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		09F6DE45283B403300CABCBE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DE4A283B409D00CABCBE /* GithubRepositoriesService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +344,7 @@
 			files = (
 				09F6DE33283B334B00CABCBE /* ReposViewController.xib in Resources */,
 				09F6DE06283ADD1B00CABCBE /* LaunchScreen.storyboard in Resources */,
+				09F6DE3F283B3F7F00CABCBE /* RepoDetailsViewController.xib in Resources */,
 				09F6DE03283ADD1B00CABCBE /* Assets.xcassets in Resources */,
 				09F6DDFE283ADD1A00CABCBE /* Main.storyboard in Resources */,
 			);
@@ -325,10 +374,17 @@
 				09F6DDFB283ADD1A00CABCBE /* ViewController.swift in Sources */,
 				09F6DE2B283B27E900CABCBE /* WindowManager.swift in Sources */,
 				09F6DE35283B34B800CABCBE /* ReposViewModel.swift in Sources */,
+				09F6DE47283B404500CABCBE /* ReposUseCase.swift in Sources */,
+				09F6DE4B283B409D00CABCBE /* GithubRepositoriesService.swift in Sources */,
+				09F6DE41283B3FA000CABCBE /* RepoDetailsViewModel.swift in Sources */,
 				09F6DE38283B359600CABCBE /* Observable.swift in Sources */,
 				09F6DE32283B334B00CABCBE /* ReposViewController.swift in Sources */,
+				09F6DE49283B405A00CABCBE /* RepoDetailsUseCase.swift in Sources */,
+				09F6DE3A283B3F3E00CABCBE /* ReposState.swift in Sources */,
 				09F6DDF7283ADD1A00CABCBE /* AppDelegate.swift in Sources */,
+				09F6DE3E283B3F7F00CABCBE /* RepoDetailsViewController.swift in Sources */,
 				09F6DE01283ADD1A00CABCBE /* RobustaTask.xcdatamodeld in Sources */,
+				09F6DE43283B3FBD00CABCBE /* RepoDetailsState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
