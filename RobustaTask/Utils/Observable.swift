@@ -32,6 +32,19 @@ class ObservableController<T> : Observable<T> {
         return controller
     }
     
+//    static func create() -> Observable<T> {
+//        
+//    }
+    
+    override init() {
+        
+    }
+    
+    init(value: T?) {
+        super.init()
+        self.value = value
+    }
+    
     var subscribers = [Subscriber<T>]()
     
     override func subscribe(observerQueue: ObserverQueue, block: @escaping Subscriber<T>) {
@@ -42,13 +55,20 @@ class ObservableController<T> : Observable<T> {
                 }
             }
             subscribers.append(subscriber)
+            if let value = value {
+                subscriber(value)
+            }
         } else {
             subscribers.append(block)
+            if let value = value {
+                block(value)
+            }
         }
         
     }
     
     func push(value: T) {
+        self.value = value
         subscribers.forEach { subscriber in
             subscriber(value)
         }
@@ -67,6 +87,7 @@ class Emitter<T> {
     }
     
     func push(value: T) {
+        controller?.value = value
         subscribers.forEach { subscriber in
             subscriber(value)
         }

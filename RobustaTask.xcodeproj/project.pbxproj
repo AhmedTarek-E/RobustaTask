@@ -37,6 +37,10 @@
 		09F6DE59283C2C0F00CABCBE /* RepoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE58283C2C0F00CABCBE /* RepoDetails.swift */; };
 		09F6DE5B283C347400CABCBE /* MiniRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE5A283C347400CABCBE /* MiniRepo.swift */; };
 		09F6DE5D283C38AD00CABCBE /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE5C283C38AD00CABCBE /* UITableViewCell+Extensions.swift */; };
+		09F6DE63283C5F3600CABCBE /* ReposUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE62283C5F3600CABCBE /* ReposUseCaseTests.swift */; };
+		09F6DE65283C657100CABCBE /* Asyncronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE64283C657100CABCBE /* Asyncronous.swift */; };
+		09F6DE67283C67DC00CABCBE /* AppResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE66283C67DC00CABCBE /* AppResult.swift */; };
+		09F6DE69283C6B7000CABCBE /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE68283C6B7000CABCBE /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,10 @@
 		09F6DE58283C2C0F00CABCBE /* RepoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetails.swift; sourceTree = "<group>"; };
 		09F6DE5A283C347400CABCBE /* MiniRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniRepo.swift; sourceTree = "<group>"; };
 		09F6DE5C283C38AD00CABCBE /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		09F6DE62283C5F3600CABCBE /* ReposUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposUseCaseTests.swift; sourceTree = "<group>"; };
+		09F6DE64283C657100CABCBE /* Asyncronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncronous.swift; sourceTree = "<group>"; };
+		09F6DE66283C67DC00CABCBE /* AppResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResult.swift; sourceTree = "<group>"; };
+		09F6DE68283C6B7000CABCBE /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +168,7 @@
 		09F6DE0F283ADD1B00CABCBE /* RobustaTaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				09F6DE5E283C5EE800CABCBE /* Domain */,
 				09F6DE10283ADD1B00CABCBE /* RobustaTaskTests.swift */,
 			);
 			path = RobustaTaskTests;
@@ -226,6 +235,9 @@
 				09F6DE37283B359600CABCBE /* Observable.swift */,
 				09F6DE4C283C206B00CABCBE /* ImagesLoader.swift */,
 				09F6DE5C283C38AD00CABCBE /* UITableViewCell+Extensions.swift */,
+				09F6DE64283C657100CABCBE /* Asyncronous.swift */,
+				09F6DE66283C67DC00CABCBE /* AppResult.swift */,
+				09F6DE68283C6B7000CABCBE /* UIViewController+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -276,6 +288,22 @@
 				09F6DE5A283C347400CABCBE /* MiniRepo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		09F6DE5E283C5EE800CABCBE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DE5F283C5EEF00CABCBE /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		09F6DE5F283C5EEF00CABCBE /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DE62283C5F3600CABCBE /* ReposUseCaseTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,9 +444,11 @@
 				09F6DE4D283C206B00CABCBE /* ImagesLoader.swift in Sources */,
 				09F6DE2B283B27E900CABCBE /* WindowManager.swift in Sources */,
 				09F6DE35283B34B800CABCBE /* ReposViewModel.swift in Sources */,
+				09F6DE69283C6B7000CABCBE /* UIViewController+Extensions.swift in Sources */,
 				09F6DE47283B404500CABCBE /* ReposUseCase.swift in Sources */,
 				09F6DE4B283B409D00CABCBE /* GithubRepositoriesService.swift in Sources */,
 				09F6DE41283B3FA000CABCBE /* RepoDetailsViewModel.swift in Sources */,
+				09F6DE67283C67DC00CABCBE /* AppResult.swift in Sources */,
 				09F6DE55283C295F00CABCBE /* RepoBasicInfo.swift in Sources */,
 				09F6DE38283B359600CABCBE /* Observable.swift in Sources */,
 				09F6DE57283C2AE600CABCBE /* RepoOwner.swift in Sources */,
@@ -432,6 +462,7 @@
 				09F6DE5B283C347400CABCBE /* MiniRepo.swift in Sources */,
 				09F6DE43283B3FBD00CABCBE /* RepoDetailsState.swift in Sources */,
 				09F6DE51283C251A00CABCBE /* RepoCell.swift in Sources */,
+				09F6DE65283C657100CABCBE /* Asyncronous.swift in Sources */,
 				09F6DE59283C2C0F00CABCBE /* RepoDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F6DE11283ADD1B00CABCBE /* RobustaTaskTests.swift in Sources */,
+				09F6DE63283C5F3600CABCBE /* ReposUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

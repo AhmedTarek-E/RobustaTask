@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReposViewController" customModule="RobustaTask" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="82d-HJ-llo" id="wDW-r8-EIj"/>
                 <outlet property="tableView" destination="XcQ-Uz-qdr" id="uwu-g6-3cx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,11 +24,16 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="808"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="82d-HJ-llo">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="XcQ-Uz-qdr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jHU-Mq-8HX"/>
+                <constraint firstItem="82d-HJ-llo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kJW-Hz-5ku"/>
+                <constraint firstItem="82d-HJ-llo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="lmn-3c-2t1"/>
                 <constraint firstItem="XcQ-Uz-qdr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mC8-4I-S41"/>
                 <constraint firstItem="XcQ-Uz-qdr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sZm-nN-d1X"/>
                 <constraint firstItem="XcQ-Uz-qdr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="usq-cJ-A5F"/>

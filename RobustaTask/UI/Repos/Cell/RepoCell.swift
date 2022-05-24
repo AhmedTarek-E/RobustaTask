@@ -7,14 +7,30 @@
 
 import UIKit
 
+protocol RepoCellDelegate: AnyObject {
+    func repoCellDidTap(_ cell: RepoCell)
+}
+
 class RepoCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
     
+    weak var delegate: RepoCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        userImageView.layer.cornerRadius = userImageView.frame.height/2
+        contentView.addGestureRecognizer(
+            UITapGestureRecognizer(
+                target: self,
+                action: #selector(didTapCellGestureHandler)
+            )
+        )
+    }
+    
+    @objc private func didTapCellGestureHandler() {
+        delegate?.repoCellDidTap(self)
     }
     
     func bind(repo: MiniRepo) {
