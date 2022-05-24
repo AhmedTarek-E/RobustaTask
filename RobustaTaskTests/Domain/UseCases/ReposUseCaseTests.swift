@@ -26,7 +26,7 @@ class ReposUseCaseTests: XCTestCase {
 
     func testWhenGetReposIsCalledThenReturnReposList() {
         let expectation = XCTestExpectation(description: "get repos")
-        let result = sut.getRepos(page: 1)
+        let result = sut.getRepos(searchKey: "", page: 1)
         result.subscribe(observerQueue: .same) { value in
             switch value {
             case .failure(_):

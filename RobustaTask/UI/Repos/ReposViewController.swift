@@ -24,6 +24,8 @@ class ReposViewController: UIViewController {
     }
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
     private let viewModel = ReposViewModel(
         reposUseCase: ReposUseCaseImp(
             service: GithubRepositoriesServiceImp()
@@ -31,6 +33,8 @@ class ReposViewController: UIViewController {
     )
     
     private var repositories: [MiniRepo] = []
+    
+    private var timer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +43,17 @@ class ReposViewController: UIViewController {
             self?.renderState(state: value)
         }
         
-        viewModel.getRepos(page: 1)
+        viewModel.getRepos(searchKey: "", page: 1)
+        
+        setupView()
+    }
+    
+    func setupView() {
+        navigationItem.title = "Repositories"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Search Repositories"
     }
     
     func renderState(state: ReposState) {
@@ -72,11 +86,17 @@ class ReposViewController: UIViewController {
     
     func displayRepos(repos: [MiniRepo]) {
         repositories.append(contentsOf: repos)
-        let start = repositories.count - repos.count
-        let indices = (start..<repos.count).map { item in
-            return IndexPath(row: item, section: 0)
-        }
-        tableView.insertRows(at: indices, with: .automatic)
+//        let start = repositories.count - repos.count
+//        let indices = (start..<repos.count).map { item in
+//            return IndexPath(row: item, section: 0)
+//        }
+        tableView.reloadData()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer?.invalidate()
+        timer = nil
     }
 
 }
@@ -112,6 +132,23 @@ extension ReposViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ReposViewController: RepoCellDelegate {
     func repoCellDidTap(_ cell: RepoCell) {
-        //TODO navigate to repo details
+        if let indexPath = tableView.indexPath(for: cell) {
+            let repo = repositories[indexPath.row]
+            let vc = RepoDetailsViewController.create(repoId: repo.basicInfo.id)
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+extension ReposViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.7, repeats: false, block: { [weak self] timer in
+            guard let self = self else { return }
+            
+            self.repositories = []
+            self.viewModel.getRepos(searchKey: text, page: 1)
+        })
     }
 }

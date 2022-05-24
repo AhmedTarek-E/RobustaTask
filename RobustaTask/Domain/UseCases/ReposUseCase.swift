@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ReposUseCase {
-    func getRepos(page: Int) -> Observable<AppResult<[MiniRepo]>>
+    func getRepos(searchKey: String, page: Int) -> Observable<AppResult<[MiniRepo]>>
 }
 
 class ReposUseCaseImp: ReposUseCase {
@@ -16,9 +16,23 @@ class ReposUseCaseImp: ReposUseCase {
         self.service = service
     }
     
-    let service: GithubRepositoriesService
+    private let service: GithubRepositoriesService
     
-    func getRepos(page: Int) -> Observable<AppResult<[MiniRepo]>> {
-        return service.getRepositories()
+    func getRepos(searchKey: String, page: Int) -> Observable<AppResult<[MiniRepo]>> {
+        return service.getRepositories().map { value in
+            if searchKey.count >= 2 {
+                switch value {
+                case .success(let data):
+                    let filtered = data.filter { repo in
+                        repo.basicInfo.name.lowercased().contains(searchKey.lowercased())
+                    }
+                    return .success(data: filtered)
+                default:
+                    return value
+                }
+            } else {
+                return value
+            }
+        }
     }
 }

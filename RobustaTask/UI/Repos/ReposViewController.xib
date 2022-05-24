@@ -21,22 +21,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XcQ-Uz-qdr">
-                    <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="82d-HJ-llo">
-                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="82d-HJ-llo">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XcQ-Uz-qdr" secondAttribute="bottom" id="Wm9-Dt-V12"/>
                 <constraint firstItem="XcQ-Uz-qdr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jHU-Mq-8HX"/>
                 <constraint firstItem="82d-HJ-llo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kJW-Hz-5ku"/>
                 <constraint firstItem="82d-HJ-llo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="lmn-3c-2t1"/>
                 <constraint firstItem="XcQ-Uz-qdr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mC8-4I-S41"/>
                 <constraint firstItem="XcQ-Uz-qdr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sZm-nN-d1X"/>
-                <constraint firstItem="XcQ-Uz-qdr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="usq-cJ-A5F"/>
             </constraints>
             <point key="canvasLocation" x="139" y="88"/>
         </view>

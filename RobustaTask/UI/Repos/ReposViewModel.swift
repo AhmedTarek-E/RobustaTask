@@ -24,14 +24,14 @@ class ReposViewModel {
         if let current = state.value {
             return current
         } else {
-            fatalError("State can't be null")
+            fatalError("State can't be nil")
         }
     }
     
     //TODO pagination
-    func getRepos(page: Int) {
+    func getRepos(searchKey: String, page: Int) {
         stateController.push(value: currentState.reduce(repos: .loading))
-        reposUseCase.getRepos(page: 1).subscribe(
+        reposUseCase.getRepos(searchKey: searchKey, page: 1).subscribe(
             observerQueue: .same) { [weak self] value in
                 guard let self = self else { return }
                 
