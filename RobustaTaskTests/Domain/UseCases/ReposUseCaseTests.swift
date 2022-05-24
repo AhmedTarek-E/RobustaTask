@@ -11,9 +11,13 @@ import XCTest
 class ReposUseCaseTests: XCTestCase {
     
     var sut: ReposUseCase!
+    var service: MockGithubRepositoriesService!
 
     override func setUpWithError() throws {
-        sut = ReposUseCaseImp()
+        service = MockGithubRepositoriesService()
+        sut = ReposUseCaseImp(
+            service: service
+        )
     }
 
     override func tearDownWithError() throws {

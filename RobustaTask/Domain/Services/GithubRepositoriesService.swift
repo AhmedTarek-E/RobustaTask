@@ -7,4 +7,6 @@
 
 import Foundation
 
-// TODO
+protocol GithubRepositoriesService {
+    func getRepositories() -> Observable<AppResult<[MiniRepo]>>
+}

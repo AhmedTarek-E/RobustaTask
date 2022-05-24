@@ -42,6 +42,11 @@
 		09F6DE67283C67DC00CABCBE /* AppResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE66283C67DC00CABCBE /* AppResult.swift */; };
 		09F6DE69283C6B7000CABCBE /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE68283C6B7000CABCBE /* UIViewController+Extensions.swift */; };
 		09F6DE6B283C798000CABCBE /* HttpRequestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE6A283C798000CABCBE /* HttpRequestClient.swift */; };
+		09F6DE6F283C7EA400CABCBE /* GithubRepositoriesServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE6E283C7EA400CABCBE /* GithubRepositoriesServiceImp.swift */; };
+		09F6DE72283C85E400CABCBE /* ApiRepositoriesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE71283C85E400CABCBE /* ApiRepositoriesResult.swift */; };
+		09F6DE75283C8E3500CABCBE /* RepositoriesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE74283C8E3500CABCBE /* RepositoriesMapper.swift */; };
+		09F6DE78283C8F6100CABCBE /* MockReposUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE77283C8F6100CABCBE /* MockReposUseCase.swift */; };
+		09F6DE7A283C918400CABCBE /* MockGithubRepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE79283C918400CABCBE /* MockGithubRepositoriesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +106,11 @@
 		09F6DE66283C67DC00CABCBE /* AppResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResult.swift; sourceTree = "<group>"; };
 		09F6DE68283C6B7000CABCBE /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		09F6DE6A283C798000CABCBE /* HttpRequestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestClient.swift; sourceTree = "<group>"; };
+		09F6DE6E283C7EA400CABCBE /* GithubRepositoriesServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoriesServiceImp.swift; sourceTree = "<group>"; };
+		09F6DE71283C85E400CABCBE /* ApiRepositoriesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRepositoriesResult.swift; sourceTree = "<group>"; };
+		09F6DE74283C8E3500CABCBE /* RepositoriesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesMapper.swift; sourceTree = "<group>"; };
+		09F6DE77283C8F6100CABCBE /* MockReposUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReposUseCase.swift; sourceTree = "<group>"; };
+		09F6DE79283C918400CABCBE /* MockGithubRepositoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGithubRepositoriesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +180,7 @@
 		09F6DE0F283ADD1B00CABCBE /* RobustaTaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				09F6DE76283C8F4900CABCBE /* Dummy */,
 				09F6DE5E283C5EE800CABCBE /* Domain */,
 				09F6DE10283ADD1B00CABCBE /* RobustaTaskTests.swift */,
 			);
@@ -196,6 +207,8 @@
 		09F6DE2C283B32C700CABCBE /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				09F6DE70283C859900CABCBE /* Models */,
+				09F6DE6C283C7C7300CABCBE /* Services */,
 				09F6DE6A283C798000CABCBE /* HttpRequestClient.swift */,
 			);
 			path = Data;
@@ -204,6 +217,7 @@
 		09F6DE2D283B32F600CABCBE /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				09F6DE73283C8E1C00CABCBE /* Mappers */,
 				09F6DE53283C293600CABCBE /* Models */,
 				09F6DE45283B403300CABCBE /* Services */,
 				09F6DE44283B3FFE00CABCBE /* UseCases */,
@@ -307,6 +321,39 @@
 				09F6DE62283C5F3600CABCBE /* ReposUseCaseTests.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		09F6DE6C283C7C7300CABCBE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DE6E283C7EA400CABCBE /* GithubRepositoriesServiceImp.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		09F6DE70283C859900CABCBE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DE71283C85E400CABCBE /* ApiRepositoriesResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		09F6DE73283C8E1C00CABCBE /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DE74283C8E3500CABCBE /* RepositoriesMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		09F6DE76283C8F4900CABCBE /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DE77283C8F6100CABCBE /* MockReposUseCase.swift */,
+				09F6DE79283C918400CABCBE /* MockGithubRepositoriesService.swift */,
+			);
+			path = Dummy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,11 +503,14 @@
 				09F6DE55283C295F00CABCBE /* RepoBasicInfo.swift in Sources */,
 				09F6DE38283B359600CABCBE /* Observable.swift in Sources */,
 				09F6DE57283C2AE600CABCBE /* RepoOwner.swift in Sources */,
+				09F6DE6F283C7EA400CABCBE /* GithubRepositoriesServiceImp.swift in Sources */,
 				09F6DE32283B334B00CABCBE /* ReposViewController.swift in Sources */,
+				09F6DE72283C85E400CABCBE /* ApiRepositoriesResult.swift in Sources */,
 				09F6DE5D283C38AD00CABCBE /* UITableViewCell+Extensions.swift in Sources */,
 				09F6DE49283B405A00CABCBE /* RepoDetailsUseCase.swift in Sources */,
 				09F6DE3A283B3F3E00CABCBE /* ReposState.swift in Sources */,
 				09F6DDF7283ADD1A00CABCBE /* AppDelegate.swift in Sources */,
+				09F6DE75283C8E3500CABCBE /* RepositoriesMapper.swift in Sources */,
 				09F6DE3E283B3F7F00CABCBE /* RepoDetailsViewController.swift in Sources */,
 				09F6DE01283ADD1A00CABCBE /* RobustaTask.xcdatamodeld in Sources */,
 				09F6DE5B283C347400CABCBE /* MiniRepo.swift in Sources */,
@@ -475,6 +525,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F6DE7A283C918400CABCBE /* MockGithubRepositoriesService.swift in Sources */,
+				09F6DE78283C8F6100CABCBE /* MockReposUseCase.swift in Sources */,
 				09F6DE11283ADD1B00CABCBE /* RobustaTaskTests.swift in Sources */,
 				09F6DE63283C5F3600CABCBE /* ReposUseCaseTests.swift in Sources */,
 			);

@@ -22,6 +22,14 @@ class Observable<T> {
     func subscribe(observerQueue: ObserverQueue, block: @escaping Subscriber<T>) {
         
     }
+    
+    func map<R>(_ block: @escaping (_ value: T) -> R) -> Observable<R> {
+        let observable = ObservableController<R>()
+        subscribe(observerQueue: .same) { value in
+            observable.push(value: block(value))
+        }
+        return observable
+    }
 }
 
 class ObservableController<T> : Observable<T> {
@@ -31,10 +39,6 @@ class ObservableController<T> : Observable<T> {
         block(emitter)
         return controller
     }
-    
-//    static func create() -> Observable<T> {
-//        
-//    }
     
     override init() {
         
@@ -73,6 +77,7 @@ class ObservableController<T> : Observable<T> {
             subscriber(value)
         }
     }
+    
 }
 
 class Emitter<T> {
@@ -81,7 +86,7 @@ class Emitter<T> {
         self.controller = controller
     }
     
-    private weak var controller: ObservableController<T>?
+    private var controller: ObservableController<T>?
     private var subscribers: [Subscriber<T>] {
         return controller?.subscribers ?? []
     }

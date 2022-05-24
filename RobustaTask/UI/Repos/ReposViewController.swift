@@ -25,7 +25,9 @@ class ReposViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private let viewModel = ReposViewModel(
-        reposUseCase: ReposUseCaseImp()
+        reposUseCase: ReposUseCaseImp(
+            service: GithubRepositoriesServiceImp()
+        )
     )
     
     private var repositories: [MiniRepo] = []
