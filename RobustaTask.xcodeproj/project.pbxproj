@@ -47,6 +47,8 @@
 		09F6DE75283C8E3500CABCBE /* RepositoriesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE74283C8E3500CABCBE /* RepositoriesMapper.swift */; };
 		09F6DE78283C8F6100CABCBE /* MockReposUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE77283C8F6100CABCBE /* MockReposUseCase.swift */; };
 		09F6DE7A283C918400CABCBE /* MockGithubRepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE79283C918400CABCBE /* MockGithubRepositoriesService.swift */; };
+		09F6DE7D283D80AE00CABCBE /* ApiRepositoryDetailsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE7C283D80AE00CABCBE /* ApiRepositoryDetailsResult.swift */; };
+		09F6DE7F283D824A00CABCBE /* RepoDetailsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE7E283D824A00CABCBE /* RepoDetailsMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		09F6DE74283C8E3500CABCBE /* RepositoriesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesMapper.swift; sourceTree = "<group>"; };
 		09F6DE77283C8F6100CABCBE /* MockReposUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReposUseCase.swift; sourceTree = "<group>"; };
 		09F6DE79283C918400CABCBE /* MockGithubRepositoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGithubRepositoriesService.swift; sourceTree = "<group>"; };
+		09F6DE7C283D80AE00CABCBE /* ApiRepositoryDetailsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRepositoryDetailsResult.swift; sourceTree = "<group>"; };
+		09F6DE7E283D824A00CABCBE /* RepoDetailsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,7 @@
 		09F6DE2C283B32C700CABCBE /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				09F6DE73283C8E1C00CABCBE /* Mappers */,
 				09F6DE70283C859900CABCBE /* Models */,
 				09F6DE6C283C7C7300CABCBE /* Services */,
 				09F6DE6A283C798000CABCBE /* HttpRequestClient.swift */,
@@ -217,7 +222,6 @@
 		09F6DE2D283B32F600CABCBE /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				09F6DE73283C8E1C00CABCBE /* Mappers */,
 				09F6DE53283C293600CABCBE /* Models */,
 				09F6DE45283B403300CABCBE /* Services */,
 				09F6DE44283B3FFE00CABCBE /* UseCases */,
@@ -335,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				09F6DE71283C85E400CABCBE /* ApiRepositoriesResult.swift */,
+				09F6DE7C283D80AE00CABCBE /* ApiRepositoryDetailsResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				09F6DE74283C8E3500CABCBE /* RepositoriesMapper.swift */,
+				09F6DE7E283D824A00CABCBE /* RepoDetailsMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 				09F6DE47283B404500CABCBE /* ReposUseCase.swift in Sources */,
 				09F6DE4B283B409D00CABCBE /* GithubRepositoriesService.swift in Sources */,
 				09F6DE41283B3FA000CABCBE /* RepoDetailsViewModel.swift in Sources */,
+				09F6DE7F283D824A00CABCBE /* RepoDetailsMapper.swift in Sources */,
 				09F6DE67283C67DC00CABCBE /* AppResult.swift in Sources */,
 				09F6DE55283C295F00CABCBE /* RepoBasicInfo.swift in Sources */,
 				09F6DE38283B359600CABCBE /* Observable.swift in Sources */,
@@ -514,6 +521,7 @@
 				09F6DE3E283B3F7F00CABCBE /* RepoDetailsViewController.swift in Sources */,
 				09F6DE01283ADD1A00CABCBE /* RobustaTask.xcdatamodeld in Sources */,
 				09F6DE5B283C347400CABCBE /* MiniRepo.swift in Sources */,
+				09F6DE7D283D80AE00CABCBE /* ApiRepositoryDetailsResult.swift in Sources */,
 				09F6DE43283B3FBD00CABCBE /* RepoDetailsState.swift in Sources */,
 				09F6DE51283C251A00CABCBE /* RepoCell.swift in Sources */,
 				09F6DE65283C657100CABCBE /* Asyncronous.swift in Sources */,

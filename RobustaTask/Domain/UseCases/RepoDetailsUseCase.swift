@@ -19,6 +19,6 @@ class RepoDetailsUseCaseImp: RepoDetailsUseCase {
     let service: GithubRepositoriesService
     
     func getDetails(repoId: Int) -> Observable<AppResult<RepoDetails>> {
-        return service.getRepositoryDetails()
+        return service.getRepositoryDetails(repoId: repoId)
     }
 }

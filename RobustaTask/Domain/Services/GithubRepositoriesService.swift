@@ -10,5 +10,5 @@ import Foundation
 protocol GithubRepositoriesService {
     func getRepositories() -> Observable<AppResult<[MiniRepo]>>
     
-    func getRepositoryDetails() -> Observable<AppResult<RepoDetails>>
+    func getRepositoryDetails(repoId: Int) -> Observable<AppResult<RepoDetails>>
 }
