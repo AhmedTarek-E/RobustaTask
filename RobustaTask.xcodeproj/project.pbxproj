@@ -41,6 +41,7 @@
 		09F6DE65283C657100CABCBE /* Asyncronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE64283C657100CABCBE /* Asyncronous.swift */; };
 		09F6DE67283C67DC00CABCBE /* AppResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE66283C67DC00CABCBE /* AppResult.swift */; };
 		09F6DE69283C6B7000CABCBE /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE68283C6B7000CABCBE /* UIViewController+Extensions.swift */; };
+		09F6DE6B283C798000CABCBE /* HttpRequestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE6A283C798000CABCBE /* HttpRequestClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		09F6DE64283C657100CABCBE /* Asyncronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncronous.swift; sourceTree = "<group>"; };
 		09F6DE66283C67DC00CABCBE /* AppResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResult.swift; sourceTree = "<group>"; };
 		09F6DE68283C6B7000CABCBE /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		09F6DE6A283C798000CABCBE /* HttpRequestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 		09F6DE2C283B32C700CABCBE /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				09F6DE6A283C798000CABCBE /* HttpRequestClient.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 			files = (
 				09F6DDFB283ADD1A00CABCBE /* ViewController.swift in Sources */,
 				09F6DE4D283C206B00CABCBE /* ImagesLoader.swift in Sources */,
+				09F6DE6B283C798000CABCBE /* HttpRequestClient.swift in Sources */,
 				09F6DE2B283B27E900CABCBE /* WindowManager.swift in Sources */,
 				09F6DE35283B34B800CABCBE /* ReposViewModel.swift in Sources */,
 				09F6DE69283C6B7000CABCBE /* UIViewController+Extensions.swift in Sources */,
