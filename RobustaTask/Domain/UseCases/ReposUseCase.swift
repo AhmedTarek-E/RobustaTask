@@ -12,27 +12,40 @@ protocol ReposUseCase {
 }
 
 class ReposUseCaseImp: ReposUseCase {
-    init(service: GithubRepositoriesService) {
+    init(service: GithubRepositoriesService, databaseService: DatabaseService) {
         self.service = service
+        self.databaseService = databaseService
     }
     
     private let service: GithubRepositoriesService
+    private let databaseService: DatabaseService
     
     func getRepos(searchKey: String, page: Int) -> Observable<AppResult<[MiniRepo]>> {
-        return service.getRepositories().map { value in
-            if searchKey.count >= 2 {
-                switch value {
-                case .success(let data):
-                    let filtered = data.filter { repo in
-                        repo.basicInfo.name.lowercased().contains(searchKey.lowercased())
+        return databaseService.fetchRepos(searchKey: searchKey, page: page).flatMap { [weak self] dataRepos in
+            guard let self = self else {
+                return ObservableController(value: .failure(error: "Unexpected Error"))
+            }
+            if dataRepos.isEmpty && page == 1 && searchKey.isEmpty {
+                return self.service.getRepositories().flatMap { value in
+                    switch value {
+                    case .success(let data):
+                        if !data.isEmpty {
+                            return self.databaseService.insert(repos: data).flatMap { _ in
+                                return self.getRepos(searchKey: searchKey, page: page)
+                            }
+                        } else {
+                            return ObservableController(value: value)
+                        }
+                        
+                    default:
+                        return ObservableController(value: value)
                     }
-                    return .success(data: filtered)
-                default:
-                    return value
+                    
                 }
             } else {
-                return value
+                return ObservableController(value: .success(data: dataRepos))
             }
         }
+        
     }
 }

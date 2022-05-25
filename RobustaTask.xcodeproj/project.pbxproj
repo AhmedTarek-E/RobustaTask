@@ -10,7 +10,6 @@
 		09F6DDF7283ADD1A00CABCBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DDF6283ADD1A00CABCBE /* AppDelegate.swift */; };
 		09F6DDFB283ADD1A00CABCBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DDFA283ADD1A00CABCBE /* ViewController.swift */; };
 		09F6DDFE283ADD1A00CABCBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F6DDFC283ADD1A00CABCBE /* Main.storyboard */; };
-		09F6DE01283ADD1A00CABCBE /* RobustaTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DDFF283ADD1A00CABCBE /* RobustaTask.xcdatamodeld */; };
 		09F6DE03283ADD1B00CABCBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F6DE02283ADD1B00CABCBE /* Assets.xcassets */; };
 		09F6DE06283ADD1B00CABCBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F6DE04283ADD1B00CABCBE /* LaunchScreen.storyboard */; };
 		09F6DE11283ADD1B00CABCBE /* RobustaTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE10283ADD1B00CABCBE /* RobustaTaskTests.swift */; };
@@ -49,6 +48,9 @@
 		09F6DE7A283C918400CABCBE /* MockGithubRepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE79283C918400CABCBE /* MockGithubRepositoriesService.swift */; };
 		09F6DE7D283D80AE00CABCBE /* ApiRepositoryDetailsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE7C283D80AE00CABCBE /* ApiRepositoryDetailsResult.swift */; };
 		09F6DE7F283D824A00CABCBE /* RepoDetailsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE7E283D824A00CABCBE /* RepoDetailsMapper.swift */; };
+		09F6DE82283DAC2C00CABCBE /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE80283DAC2C00CABCBE /* Database.xcdatamodeld */; };
+		09F6DE86283DB32B00CABCBE /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE85283DB32B00CABCBE /* DatabaseService.swift */; };
+		09F6DE88283DB36200CABCBE /* DatabaseServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE87283DB36200CABCBE /* DatabaseServiceImp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +75,6 @@
 		09F6DDF6283ADD1A00CABCBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F6DDFA283ADD1A00CABCBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		09F6DDFD283ADD1A00CABCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		09F6DE00283ADD1A00CABCBE /* RobustaTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RobustaTask.xcdatamodel; sourceTree = "<group>"; };
 		09F6DE02283ADD1B00CABCBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09F6DE05283ADD1B00CABCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09F6DE07283ADD1B00CABCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +116,9 @@
 		09F6DE79283C918400CABCBE /* MockGithubRepositoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGithubRepositoriesService.swift; sourceTree = "<group>"; };
 		09F6DE7C283D80AE00CABCBE /* ApiRepositoryDetailsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRepositoryDetailsResult.swift; sourceTree = "<group>"; };
 		09F6DE7E283D824A00CABCBE /* RepoDetailsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsMapper.swift; sourceTree = "<group>"; };
+		09F6DE81283DAC2C00CABCBE /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		09F6DE85283DB32B00CABCBE /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		09F6DE87283DB36200CABCBE /* DatabaseServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceImp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +180,7 @@
 				09F6DE02283ADD1B00CABCBE /* Assets.xcassets */,
 				09F6DE04283ADD1B00CABCBE /* LaunchScreen.storyboard */,
 				09F6DE07283ADD1B00CABCBE /* Info.plist */,
-				09F6DDFF283ADD1A00CABCBE /* RobustaTask.xcdatamodeld */,
+				09F6DE80283DAC2C00CABCBE /* Database.xcdatamodeld */,
 			);
 			path = RobustaTask;
 			sourceTree = "<group>";
@@ -287,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				09F6DE4A283B409D00CABCBE /* GithubRepositoriesService.swift */,
+				09F6DE85283DB32B00CABCBE /* DatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				09F6DE6E283C7EA400CABCBE /* GithubRepositoriesServiceImp.swift */,
+				09F6DE87283DB36200CABCBE /* DatabaseServiceImp.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -504,7 +510,9 @@
 				09F6DE69283C6B7000CABCBE /* UIViewController+Extensions.swift in Sources */,
 				09F6DE47283B404500CABCBE /* ReposUseCase.swift in Sources */,
 				09F6DE4B283B409D00CABCBE /* GithubRepositoriesService.swift in Sources */,
+				09F6DE82283DAC2C00CABCBE /* Database.xcdatamodeld in Sources */,
 				09F6DE41283B3FA000CABCBE /* RepoDetailsViewModel.swift in Sources */,
+				09F6DE88283DB36200CABCBE /* DatabaseServiceImp.swift in Sources */,
 				09F6DE7F283D824A00CABCBE /* RepoDetailsMapper.swift in Sources */,
 				09F6DE67283C67DC00CABCBE /* AppResult.swift in Sources */,
 				09F6DE55283C295F00CABCBE /* RepoBasicInfo.swift in Sources */,
@@ -517,9 +525,9 @@
 				09F6DE49283B405A00CABCBE /* RepoDetailsUseCase.swift in Sources */,
 				09F6DE3A283B3F3E00CABCBE /* ReposState.swift in Sources */,
 				09F6DDF7283ADD1A00CABCBE /* AppDelegate.swift in Sources */,
+				09F6DE86283DB32B00CABCBE /* DatabaseService.swift in Sources */,
 				09F6DE75283C8E3500CABCBE /* RepositoriesMapper.swift in Sources */,
 				09F6DE3E283B3F7F00CABCBE /* RepoDetailsViewController.swift in Sources */,
-				09F6DE01283ADD1A00CABCBE /* RobustaTask.xcdatamodeld in Sources */,
 				09F6DE5B283C347400CABCBE /* MiniRepo.swift in Sources */,
 				09F6DE7D283D80AE00CABCBE /* ApiRepositoryDetailsResult.swift in Sources */,
 				09F6DE43283B3FBD00CABCBE /* RepoDetailsState.swift in Sources */,
@@ -866,13 +874,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		09F6DDFF283ADD1A00CABCBE /* RobustaTask.xcdatamodeld */ = {
+		09F6DE80283DAC2C00CABCBE /* Database.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				09F6DE00283ADD1A00CABCBE /* RobustaTask.xcdatamodel */,
+				09F6DE81283DAC2C00CABCBE /* Database.xcdatamodel */,
 			);
-			currentVersion = 09F6DE00283ADD1A00CABCBE /* RobustaTask.xcdatamodel */;
-			path = RobustaTask.xcdatamodeld;
+			currentVersion = 09F6DE81283DAC2C00CABCBE /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

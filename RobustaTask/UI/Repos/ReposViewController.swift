@@ -29,7 +29,10 @@ class ReposViewController: UIViewController {
     
     private let viewModel = ReposViewModel(
         reposUseCase: ReposUseCaseImp(
-            service: GithubRepositoriesServiceImp()
+            service: GithubRepositoriesServiceImp(),
+            databaseService: DatabaseServiceImp(
+                managedContext: AppDelegate.shared.persistentContainer.viewContext
+            )
         )
     )
     
@@ -135,7 +138,7 @@ extension ReposViewController {
         )
         tableView.dataSource = self
         tableView.delegate = self
-        
+        tableView.prefetchDataSource = self
     }
 }
 
@@ -171,7 +174,19 @@ extension ReposViewController: UISearchResultsUpdating {
             guard let self = self else { return }
             
             self.repositories = []
+            self.tableView.reloadData()
             self.viewModel.getRepos(searchKey: text, page: 1)
         })
+    }
+}
+
+extension ReposViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        for indexPath in indexPaths {
+            if indexPath.row >= repositories.count - 4 {
+                viewModel.paginate()
+                return
+            }
+        }
     }
 }

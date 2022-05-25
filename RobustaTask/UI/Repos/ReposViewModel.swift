@@ -28,10 +28,13 @@ class ReposViewModel {
         }
     }
     
-    //TODO pagination
+    private var currentPage = 1
+    private var recentSearchKey = ""
+    
     func getRepos(searchKey: String, page: Int) {
+        recentSearchKey = searchKey
         stateController.push(value: currentState.reduce(repos: .loading))
-        reposUseCase.getRepos(searchKey: searchKey, page: 1).subscribe(
+        reposUseCase.getRepos(searchKey: searchKey, page: page).subscribe(
             observerQueue: .same) { [weak self] value in
                 guard let self = self else { return }
                 
@@ -42,11 +45,16 @@ class ReposViewModel {
                             repos: .failure(error: error))
                     )
                 case .success(data: let data):
+                    self.currentPage = page
                     self.stateController.push(
                         value: self.currentState.reduce(
                             repos: .success(data: data))
                     )
                 }
             }
+    }
+    
+    func paginate() {
+        getRepos(searchKey: recentSearchKey, page: currentPage + 1)
     }
 }

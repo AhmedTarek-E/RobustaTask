@@ -30,6 +30,18 @@ class Observable<T> {
         }
         return observable
     }
+    
+    func flatMap<R>(_ block: @escaping (_ value: T) -> Observable<R>) -> Observable<R> {
+        let observable = ObservableController<R>()
+        
+        subscribe(observerQueue: .same) { value in
+            let newObservable = block(value)
+            newObservable.subscribe(observerQueue: .same) { value in
+                observable.push(value: value)
+            }
+        }
+        return observable
+    }
 }
 
 class ObservableController<T> : Observable<T> {
