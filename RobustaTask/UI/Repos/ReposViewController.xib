@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReposViewController" customModule="RobustaTask" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="82d-HJ-llo" id="wDW-r8-EIj"/>
+                <outlet property="retryButton" destination="I9V-eL-af2" id="dcV-io-427"/>
                 <outlet property="tableView" destination="XcQ-Uz-qdr" id="uwu-g6-3cx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,10 +28,20 @@
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="82d-HJ-llo">
                     <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                 </activityIndicatorView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9V-eL-af2">
+                    <rect key="frame" x="178" y="432.5" width="58.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Retry"/>
+                    <connections>
+                        <action selector="retryAction:" destination="-1" eventType="touchUpInside" id="xNc-mo-afY"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="I9V-eL-af2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9l9-IV-7r0"/>
+                <constraint firstItem="I9V-eL-af2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GaR-tM-aB3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XcQ-Uz-qdr" secondAttribute="bottom" id="Wm9-Dt-V12"/>
                 <constraint firstItem="XcQ-Uz-qdr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jHU-Mq-8HX"/>
                 <constraint firstItem="82d-HJ-llo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kJW-Hz-5ku"/>

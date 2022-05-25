@@ -23,6 +23,7 @@ class ReposViewController: UIViewController {
         }
     }
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var retryButton: UIButton!
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -48,6 +49,11 @@ class ReposViewController: UIViewController {
         setupView()
     }
     
+    @IBAction func retryAction(_ sender: Any) {
+        viewModel.getRepos(searchKey: searchController.searchBar.text ?? "", page: 1)
+    }
+    
+    
     func setupView() {
         navigationItem.title = "Repositories"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -60,17 +66,34 @@ class ReposViewController: UIViewController {
         switch state.repos {
         case .initial:
             hideIndicator()
+            hideRetryButton()
             
         case .loading:
             showIndicator()
+            hideRetryButton()
             
         case .failure(error: let error):
             hideIndicator()
             showError(error: error)
+            showRetryButton()
+            
             
         case .success(data: let data):
             hideIndicator()
+            hideRetryButton()
             displayRepos(repos: data)
+        }
+    }
+    
+    func hideRetryButton() {
+        retryButton.isHidden = true
+    }
+    
+    func showRetryButton() {
+        if repositories.isEmpty {
+            retryButton.isHidden = false
+        } else {
+            retryButton.isHidden = true
         }
     }
     
