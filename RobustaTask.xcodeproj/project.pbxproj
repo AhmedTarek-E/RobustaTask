@@ -51,6 +51,8 @@
 		09F6DE82283DAC2C00CABCBE /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE80283DAC2C00CABCBE /* Database.xcdatamodeld */; };
 		09F6DE86283DB32B00CABCBE /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE85283DB32B00CABCBE /* DatabaseService.swift */; };
 		09F6DE88283DB36200CABCBE /* DatabaseServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE87283DB36200CABCBE /* DatabaseServiceImp.swift */; };
+		09F6DE8A283DE44300CABCBE /* MockDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE89283DE44300CABCBE /* MockDatabaseService.swift */; };
+		09F6DE8E283DE89400CABCBE /* RepoDetailsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6DE8D283DE89400CABCBE /* RepoDetailsUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		09F6DE81283DAC2C00CABCBE /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		09F6DE85283DB32B00CABCBE /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		09F6DE87283DB36200CABCBE /* DatabaseServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceImp.swift; sourceTree = "<group>"; };
+		09F6DE89283DE44300CABCBE /* MockDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabaseService.swift; sourceTree = "<group>"; };
+		09F6DE8D283DE89400CABCBE /* RepoDetailsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				09F6DE62283C5F3600CABCBE /* ReposUseCaseTests.swift */,
+				09F6DE8D283DE89400CABCBE /* RepoDetailsUseCaseTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 			children = (
 				09F6DE77283C8F6100CABCBE /* MockReposUseCase.swift */,
 				09F6DE79283C918400CABCBE /* MockGithubRepositoriesService.swift */,
+				09F6DE89283DE44300CABCBE /* MockDatabaseService.swift */,
 			);
 			path = Dummy;
 			sourceTree = "<group>";
@@ -541,7 +547,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F6DE8E283DE89400CABCBE /* RepoDetailsUseCaseTests.swift in Sources */,
 				09F6DE7A283C918400CABCBE /* MockGithubRepositoriesService.swift in Sources */,
+				09F6DE8A283DE44300CABCBE /* MockDatabaseService.swift in Sources */,
 				09F6DE78283C8F6100CABCBE /* MockReposUseCase.swift in Sources */,
 				09F6DE11283ADD1B00CABCBE /* RobustaTaskTests.swift in Sources */,
 				09F6DE63283C5F3600CABCBE /* ReposUseCaseTests.swift in Sources */,
